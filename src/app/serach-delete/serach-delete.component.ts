@@ -33,14 +33,14 @@ password!:string;
   this.data=[
     {
       "userEmail":"abc@gmail.com",
-      "userName":"Angular",
+      "userName":"Ashish",
       "mobileNumber":"999999999",
       "password":"abc"
     },
     {
 
       "userEmail":"abcd@gmail.com",
-      "userName":"react",
+      "userName":"Darshi",
       "mobileNumber":"123",
       "password":"abc"
     }
@@ -50,7 +50,7 @@ password!:string;
 
   
 updatebutton(){
-this.http.put("http://localhost:8080/admin/userEdit/"+this.userEmail,{
+this.http.post("http://localhost:8080/admin/updateUser/",{
   userEmail:this.userEmail,
   userName:this.userName,
   mobileNumber:this.mobileNumber,
@@ -70,24 +70,24 @@ this.http.put("http://localhost:8080/admin/userEdit/"+this.userEmail,{
 logout(){
   this.router.navigate(['login']);
 }
-// editbutton(emailId:string){
-//   let mail,name,mobile,pass;
-//   for(let i=0;i<this.data.length;i++){
-//     if(this.data[i].userEmail==emailId){
-//       name=this.data[i].userName;
-//       mail=this.data[i].userEmail;
-//       mobile=this.data[i].mobileNumber;
-//       pass=this.data[i].password;
-//       this.userName=name;
-//       this.userEmail=mail;
-//       this.mobileNumber=mobile;
-//       this.password=pass;
-//       const filterArray = 
-//       this.data.filter((item:any)=>item.userEmail !== emailId);
-//       this.data=filterArray;
-//     }
-//   }
-// }
+editbutton(emailId:string){
+  let mail,name,mobile,pass;
+  for(let i=0;i<this.data.length;i++){
+    if(this.data[i].userEmail==emailId){
+      name=this.data[i].userName;
+      mail=this.data[i].userEmail;
+      mobile=this.data[i].mobileNumber;
+      pass=this.data[i].password;
+      this.userName=name;
+      this.userEmail=mail;
+      this.mobileNumber=mobile;
+      this.password=pass;
+      const filterArray = 
+      this.data.filter((item:any)=>item.userEmail !== emailId);
+      this.data=filterArray;
+    }
+  }
+}
 
 deletebutton(emailId:string){
 var flag=null;

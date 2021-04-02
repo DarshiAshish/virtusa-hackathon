@@ -20,4 +20,9 @@ export class TestService {
 public logInto(userlogin:UserLogin):Observable<any>{
   return this.http.post<any>('http://localhost:8080/login',userlogin);
   }
+  loggedIn(){
+    return !!localStorage.getItem('token'); 
+  }
+
+
 }

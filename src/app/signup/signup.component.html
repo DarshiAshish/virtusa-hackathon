@@ -14,7 +14,7 @@
 <form style="display: inline-block;">
     <div class="formsign" >
     <div>
-        <input type="email"  name="userEmail" placeholder="Enter Email" class="textfields"  [(ngModel)]="userEmail"  style=" padding-left: 50px;margin-left:200px; width:400px; height:40px; ">
+        <input type="email"  name="userEmail" placeholder="Enter Email" pattern="[A-Za-z0-9._%-]+@[A-Za-z0-9._%-]+\\.[a-z]{2,3}" class="textfields"  [(ngModel)]="userEmail"  style=" padding-left: 50px;margin-left:200px; width:400px; height:40px; ">
     </div>
     <br>
     <div>

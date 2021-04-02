@@ -11,4 +11,13 @@ export class CoursetestService {
   updateCourse(c:Course):Observable<any>{
     return this.http.post<any>("http://localhost:8080/admin/courses",c);
   }
+  // getdetails():Observable<any>{
+  //   return this.http.post('http://localhost:8080/register');
+  // }
+
+  
+  // getData():Observable<any>{
+  //   return this.src.get('http://localhost:8080/courses');
+    
+  // }
 }

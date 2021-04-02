@@ -17,7 +17,7 @@ import { SerachDeleteComponent } from './serach-delete/serach-delete.component';
 import { UserRegistationService } from './serach-delete/user-registation.service';
 import { AdmincourseComponent } from './admincourse/admincourse.component';
 import { CoursetestService } from './admincourse/coursetest.service';
-
+import {AuthGuard} from './auth.guard';
 enableProdMode();
 
 @NgModule({
@@ -41,7 +41,7 @@ enableProdMode();
     
   ],
 
-  providers: [TestService,CoursesService,UserRegistationService,CoursetestService],
+  providers: [TestService,CoursesService,UserRegistationService,CoursetestService,AuthGuard],
   bootstrap: [AppComponent]
 
 })

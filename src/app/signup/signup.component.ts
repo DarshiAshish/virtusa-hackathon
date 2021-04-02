@@ -33,6 +33,8 @@ export class SignupComponent implements OnInit {
      let resp=this.svc.doRegistration(this.user);
      resp.subscribe(data=>{
        if(data){
+        // console.log(data);
+        // localStorage.setItem('token',data.token);
        this.router.navigate(['courses']);
      }
      else{
