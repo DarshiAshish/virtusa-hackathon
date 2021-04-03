@@ -97,5 +97,8 @@ search(){
   }
 
 }
+// GotoPage(Name:string){
+// this.router.navigate(['courses/'+Name]);
+// }
 }
 

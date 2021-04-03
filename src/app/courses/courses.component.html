@@ -17,13 +17,13 @@
 <div class="container" style="width: 100%;">
 <div class="row">
   
-<div class="card col-md-3 mr-5"  (click)="goToCourse()"  *ngFor="let data of data" style="margin:10px" >
+<div class="card col-md-3 mr-5"   *ngFor="let data of data" style="margin:10px" routerLink="/details/:{{data.courseName}}" >
 <!-- <div class="col-sm-1"></div> -->
 <div style="column-gap: 300px;">
     <div class="card-header" style="text-align: center;">{{data.courseName}}</div>
   <div class="card-body">
-    <img src={{data.courseImg}} style="width: 200px; height: 110px; ">
-      <p>{{data.courseYear}}</p>
+    <img  src={{data.courseImg}} style="width: 200px; height: 110px; ">
+      <p  >{{data.courseYear}}</p>
       <p>{{data.courseType}}</p>
   </div>
 </div>

@@ -18,6 +18,7 @@ import { UserRegistationService } from './serach-delete/user-registation.service
 import { AdmincourseComponent } from './admincourse/admincourse.component';
 import { CoursetestService } from './admincourse/coursetest.service';
 import {AuthGuard} from './auth.guard';
+import { CourseintoComponent } from './courseinto/courseinto.component';
 enableProdMode();
 
 @NgModule({
@@ -28,7 +29,8 @@ enableProdMode();
     LoginComponent,
     CoursesComponent,
     SerachDeleteComponent,
-    AdmincourseComponent
+    AdmincourseComponent,
+    CourseintoComponent
   ],
 
   imports: [

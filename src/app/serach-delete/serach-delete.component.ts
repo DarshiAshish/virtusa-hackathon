@@ -50,7 +50,7 @@ password!:string;
 
   
 updatebutton(){
-this.http.post("http://localhost:8080/admin/updateUser/",{
+this.http.put("http://localhost:8080/admin/updateUser/",{
   userEmail:this.userEmail,
   userName:this.userName,
   mobileNumber:this.mobileNumber,
@@ -65,7 +65,7 @@ this.http.post("http://localhost:8080/admin/updateUser/",{
     }
   }
 )
-
+window.location.reload();
 }
 logout(){
   this.router.navigate(['login']);
@@ -88,7 +88,9 @@ editbutton(emailId:string){
     }
   }
 }
-
+courses(){
+  this.router.navigate(['admin/courses']);
+}
 deletebutton(emailId:string){
 var flag=null;
 this.http.get('http://localhost:8080/admin/delete/'+emailId,{observe:"response"})
